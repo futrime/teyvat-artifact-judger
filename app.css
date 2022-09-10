@@ -1,0 +1,4 @@
+.taj-result {
+    min-height: 100px;
+    max-width: min(100%, 576px)
+}

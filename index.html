@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="zh">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/css/bootstrap.min.css">
+    <title>T瓦特圣遗物评分器</title>
+</head>
+
+<body>
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3 taj-form">
+                <div class="input-group mb-3">
+                    <span class="input-group-text">套装</span>
+                    <select class="form-select taj-set">
+                    </select>
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text">佩戴部位</span>
+                    <select class="form-select taj-slot">
+                        <option value="生之花">生之花</option>
+                        <option value="死之羽">死之羽</option>
+                        <option value="时之沙">时之沙</option>
+                        <option value="空之杯">空之杯</option>
+                        <option value="理之冠">理之冠</option>
+                    </select>
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text">等级</span>
+                    <input class="form-control taj-level" type="text">
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text">主属性</span>
+                    <select class="form-select taj-main-stat">
+                        <option value="攻击力（数值）" hidden>攻击力（数值）</option>
+                        <option value="生命值（数值）" hidden>生命值（数值）</option>
+                        <option value="攻击力" hidden>攻击力</option>
+                        <option value="生命值" hidden>生命值</option>
+                        <option value="防御力" hidden>防御力</option>
+                        <option value="元素精通" hidden>元素精通</option>
+                        <option value="元素充能效率" hidden>元素充能效率</option>
+                        <option value="暴击伤害" hidden>暴击伤害</option>
+                        <option value="暴击率" hidden>暴击率</option>
+                        <option value="治疗加成" hidden>治疗加成</option>
+                        <option value="物理伤害加成" hidden>物理伤害加成</option>
+                        <option value="水元素伤害加成" hidden>水元素伤害加成</option>
+                        <option value="火元素伤害加成" hidden>火元素伤害加成</option>
+                        <option value="风元素伤害加成" hidden>风元素伤害加成</option>
+                        <option value="雷元素伤害加成" hidden>雷元素伤害加成</option>
+                        <option value="冰元素伤害加成" hidden>冰元素伤害加成</option>
+                        <option value="草元素伤害加成" hidden>草元素伤害加成</option>
+                        <option value="岩元素伤害加成" hidden>岩元素伤害加成</option>
+                    </select>
+                </div>
+                <div class="input-group mb-3 taj-sub-stat-form" hidden>
+                    <span class="input-group-text">副属性</span>
+                    <select class="form-select taj-sub-stat">
+                        <option value="无" selected>无</option>
+                        <option value="暴击率">暴击率</option>
+                        <option value="暴击伤害">暴击伤害</option>
+                        <option value="攻击力">攻击力</option>
+                        <option value="攻击力（数值）">攻击力（数值）</option>
+                        <option value="元素精通">元素精通</option>
+                        <option value="元素充能效率">元素充能效率</option>
+                        <option value="防御力">防御力</option>
+                        <option value="防御力（数值）">防御力（数值）</option>
+                        <option value="生命值">生命值</option>
+                        <option value="生命值（数值）">生命值（数值）</option>
+                    </select>
+                    <input class="form-control taj-sub-stat-value" type="text">
+                </div>
+                <button class="btn btn-outline-secondary w-100 taj-submit" type="button">评分</button>
+            </div>
+            <div class="col-12 col-sm-6 col-md-8 col-lg-9 d-flex flex-wrap taj-info">
+                <div class="pb-3 px-2 flex-fill taj-result" hidden>
+                    <div class="card">
+                        <div class="card-body w-100">
+                            <p class="card-title">
+                                <span>
+                                    <small>评分：</small><span class="fs-2 taj-score"></span>%
+                                </span>
+                                <small class="text-muted">
+                                    （满级期望：<span class="taj-expected-score"></span>%）
+                                </small>
+                            </p>
+                            <p class="card-text">
+                                适用于：<span class="taj-characters"></span>
+                            </p>
+                            <p class="card-text">
+                                <small class="text-muted taj-detail"></small>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="app.js" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
